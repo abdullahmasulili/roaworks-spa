@@ -37,7 +37,7 @@
                 ></v-app-bar-nav-icon>
               </template>
               <v-list>
-                <v-list-item link v-for="(item, index) in items" :key="index">
+                <v-list-item link v-for="(item, index) in items" :key="index" :href="item.to">
                   <v-list-item-title>{{ item.title }}</v-list-item-title>
                 </v-list-item>
               </v-list>
@@ -87,10 +87,10 @@ export default {
   data() {
     return {
       items: [
-        { title: "Our Clients" },
-        { title: "Our Services" },
-        { title: "Our Works" },
-        { title: "Start A Project" },
+        { title: "Our Clients", to: '#our-clients' },
+        { title: "Our Services", to: '#our-service' },
+        { title: "Our Works", to: '#our-works' },
+        { title: "Start A Project", to: '#start-project' },
       ],
     };
   },
